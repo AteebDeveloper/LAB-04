@@ -85,14 +85,83 @@
             width: 25%;
             filter: opacity(30%);
         }
-    </style>
 
+        .animation {
+            background: yellow;
+            border: 2px solid black;
+            width: 22%;
+            height: auto;
+            transition: all 0s ease-in-out;
+        }
+
+        .animation:hover {
+            transform: rotate(180deg);
+        }
+
+        .square {
+            width: 100px;
+            height: 100px;
+            background: red;
+            position: relative;
+            animation: mymove 2s 1s infinite;
+        }
+
+        @keyframes mymove {
+            from {
+                left: 0px;
+                width: 100px;
+                height: 100px;
+                transform: rotate(0deg);
+                border-radius: 0px
+            }
+
+            to {
+                left: 200px;
+                width: 200px;
+                height: 200px;
+                transform: rotate(180deg);
+            }
+        }
+
+        .shadow div {
+            float: left;
+            padding-left: 5px;
+        }
+
+        .shadow figure {
+            color: white;
+            text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+        }
+
+        .shadow img {
+            box-shadow: 2px 2px 4px #000000;
+            width: 400px;
+            height: 250px;
+        }
+
+        .shadow h1 {
+            color: white;
+            text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+        }
+
+        #figc {
+            color: rgb(0, 0, 0);
+            padding: 2px;
+            text-align: center;
+            background-color: #fcfcfc;
+            margin-top: -20px;
+            padding-right: 15px;
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+    </style>
     <title>National Assembly</title>
 
 </head>
 
 <body>
-    <h1> <a href="https://en.wikipedia.org/wiki/National_Assembly_of_Pakistan" target="_blank">National Assembly of
+    <h1> <a href="https://en.wikipedia.org/wiki/National_Assembly_of_Pakistan" target="_blank"
+            style="text-decoration:none; color: rgb(245, 0, 0);">National Assembly of
             Pakistan</a></h1>
     <p class="background"><b>The National Assembly </b>or <b>Aiwān-e-Zairīñ of Pākistān </b> is the lower legislative
         house of the bicameral Parliament of Pakistan, which also comprises the Senate of Pakistan (upper house). The
@@ -107,7 +176,8 @@
         proportional representation.<br />
         Each National Assembly is formed for a five-year term, commencing from the date of the first sitting, after
         which it is automatically dissolved. <u>Currently the National Assembly can not be dissolved by the <b>President
-                of Pakistan</b>, it is dissolved by the <b>Prime Minister of Pakistan.</b></u></p>
+                of Pakistan</b>, it is dissolved by the <b>Prime Minister of Pakistan.</b></u>
+    </p>
     <h2><u>History</u></h2>
     <strong>This text is important!</strong>
     <p><mark>The first session of the first Constituent Assembly of Pakistan was held on 10 August 1947</mark> at Sindh
@@ -241,7 +311,32 @@ On 12 August 1947, a resolution was approved regarding officially addressing Mr.
         <label for="lname">Last name:</label><br>
         <input type="text" id="lname" name="lname" value="Raza" </form>
         <h1>The button Element</h1>
-        <button type="button">Submit</button>
+        <button type="button">Submit</button><br><br>
+        <div class="animation">This is is no one who loves pain itself, who seeks after it and wants to have it , simply
+            because
+            it is pain...
+        </div>
+        <div class="imageshape" style="float:left; margin: 30px;">
+            <img src="na1.jpg" alt="" style="border-radius: 50%;">
+            <img src="na1.jpg" alt="" style="border-radius: 5%;">
+        </div><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        <div class="shadow">
+            <div>
+                <h1>Text Shadow effects</h1>
+            </div>
+            <div>
+                <figure>
+                    <img src="forest.jpg" alt="Trulli" style="width:300px; height: 250px;">
+                    <figcaption id="figc">Add a description of the image here</figcaption>
+                </figure>
+            </div>
+        </div><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+        <div class="square">
+
+        </div>
+
+
 </body>
 
 </html>
